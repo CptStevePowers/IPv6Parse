@@ -53,7 +53,7 @@ def get_test_string(length=500, hidden_ips=1):
     return ''.join(ret_vals), solutions
 
 class IPv6Parser():
-    def __init__(self, regex='(([0-9a-fA-F]{1,4}(?=:))|(:[0-9a-fA-F]{0,4})){2,8}'):
+    def __init__(self, regex='(([0-9a-fA-F]{1,4}(?=:))|(:[0-9a-fA-F]{1,4})){2,8}'):
         self.regex = regex
 
     def test(self, length=50000, n=100):
