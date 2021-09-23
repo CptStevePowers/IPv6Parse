@@ -87,7 +87,7 @@ class IPv6Parser():
         return found_ips
 
 if __name__ == '__main__':
-    finder = IPv6Parser(regex='(([0-9a-fA-F]{1,4}(?=:))|(:[0-9a-fA-F]{1,4})){2,8}')
+    finder = IPv6Parser()
     recalls = []
     precisions = []
     for i in tqdm(range(100)):
