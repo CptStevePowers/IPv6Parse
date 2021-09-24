@@ -81,7 +81,7 @@ class IPv6Parser:
         for sol in solutions:
             if not sol in true_positives:
                 false_negatives.append(sol)
-        precision = len(true_positives) / (len(true_positives) + len(false_positives))
+        precision = len(true_positives) / ((len(true_positives) + len(false_positives)))
         print("Precision:", precision)
         recall = len(true_positives) / len(solutions)
         print("Recall", recall)
@@ -118,5 +118,7 @@ if __name__ == "__main__":
         recalls.append(res["recall"])
         precisions.append(res["precision"])
     print("Mean Precision:", statistics.mean(precisions))
+    print("Median Precision:", statistics.median(precisions))
     print("Mean Recall:", statistics.mean(recalls))
+    print("Median Recall:", statistics.median(recalls))
     pass
